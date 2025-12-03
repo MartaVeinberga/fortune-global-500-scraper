@@ -12,7 +12,7 @@ This project enables comprehensive analysis of the world's largest corporations 
 
 - **Multi-year scraping** – Collect data from any year available on Fortune's website
 - **Consistency filtering** – Identify companies that appear across all selected years
-- **Rich dataset** – Company Name, country, industry, year, fortune global 500 ranking, revenue, profits, assets, employees
+- **Rich dataset** – Company, country, industry, year, rank, revenue, profits, assets, employees
 - **Export to CSV** – Clean, analysis-ready data format
 - **Example analysis** – Sample visualization and insights included
 
@@ -86,3 +86,4 @@ print(df.head())
 ## License
 
 This project is provided for educational and research purposes. Please respect Fortune's terms of service and copyright when using scraped data.
+
