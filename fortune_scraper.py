@@ -71,9 +71,10 @@ print(fortune_df.head())
     
 # Filter to companies in all years
 fortune_df_all_years = filter_consistent_companies(fortune_df)
-print(f"\nConsistent companies: {fortune_df_all_years['Company Name'].nunique()}")
+print(f"\nConsistent companies: {fortune_df_all_years['Company'].nunique()}")
 print(f"Filtered records: {fortune_df_all_years.shape}")
 
 
 fortune_df_all_years.to_csv('fortune500_data.csv', index=False)
+
 
