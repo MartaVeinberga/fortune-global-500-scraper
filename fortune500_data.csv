@@ -1,4 +1,4 @@
-Company Name,Country,Industry,Year,Fortune global 500 ranking,Revenue (USD Millions),Profits (USD Millions),Assets (USD Millions),Employees
+Company,Country,Industry,Year,Rank,Revenue,Profits,Assets,Employees
 Walmart,U.S.,General Merchandisers,2024,1,648125.0,15511.0,252399.0,"2,100,000"
 Amazon,U.S.,Internet Services and Retailing,2024,2,574785.0,30425.0,527854.0,"1,525,000"
 State Grid,China,Utilities,2024,3,545947.5,9204.3,781126.2,"1,361,423"
@@ -1289,3 +1289,4 @@ US Foods Holding,U.S.,Wholesalers: Food and Grocery,2022,485,29487.0,164.0,12521
 Jabil,U.S.,Semiconductors and Other Electronic Components,2022,490,29285.0,696.0,16654.0,"238,000"
 Starbucks,U.S.,Food Services,2022,492,29060.6,4199.3,31392.6,"383,000"
 Mondelez International,U.S.,Food Consumer Products,2022,498,28720.0,4300.0,67092.0,"79,000"
+
