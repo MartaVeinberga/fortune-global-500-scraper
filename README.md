@@ -1,6 +1,6 @@
 # Fortune Global 500 Scraper
 
-Scrapes **Fortune Global 500** [link](https://fortune.com/ranking/global500/) company data for analysis and research.
+Scrapes **Fortune Global 500** [(link)](https://fortune.com/ranking/global500/) company data for analysis and research.
 
 This project allows you to:
 
@@ -40,4 +40,5 @@ df_filtered.to_csv('fortune500_data.csv', index=False)
 - Profits (USD Millions)
 - Assets (USD Millions)
 - Employees
+
 ```
