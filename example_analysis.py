@@ -10,6 +10,9 @@ df_filtered = filter_consistent_companies(df)
 df_2024 = df_filtered[df_filtered['Year'] == 2024]
 top_countries = df_2024['Country'].value_counts().head(15).sort_values()
 
+# Sumarry of numerical values
+print(df_2024.describe())
+
 # Plot
 plt.figure(figsize=(10, 6))
 bars = plt.barh(top_countries.index, top_countries.values, color='#2E86AB')
@@ -22,4 +25,5 @@ for bar in bars:
 plt.title("Top 15 Countries in Fortune Global 500 (2024)", fontsize=14, fontweight='bold')
 plt.xlabel("Number of Companies")
 plt.tight_layout()
+
 plt.show()
