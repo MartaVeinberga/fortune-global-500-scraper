@@ -47,7 +47,7 @@ def scrape_fortune_global(years):
                 "Revenue (USD Millions)": money_to_float(d.get("Revenues ($M)")),
                 "Profits (USD Millions)": money_to_float(d.get("Profits ($M)")),
                 "Assets (USD Millions)": money_to_float(d.get("Assets ($M)")),
-                "Employees": d.get("Employees")
+                "Employees": int(d.get("Employees", "0").replace(",", ""))
             })
 
     return pd.DataFrame(all_data)
@@ -73,5 +73,6 @@ print(fortune_df.head())
 fortune_df_all_years = filter_consistent_companies(fortune_df)
 print(f"\nConsistent companies: {fortune_df_all_years['Company Name'].nunique()}")
 print(f"Filtered records: {fortune_df_all_years.shape}")
+
 
 fortune_df_all_years.to_csv('fortune500_data.csv', index=False)
