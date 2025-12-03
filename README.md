@@ -82,9 +82,3 @@ import pandas as pd
 df = pd.read_csv('fortune500_data.csv')
 print(df.head())
 ```
-
-## License
-
-This project is provided for educational and research purposes. Please respect Fortune's terms of service and copyright when using scraped data.
-
-
