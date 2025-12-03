@@ -1,20 +1,29 @@
 # Fortune Global 500 Scraper
 
-Scrapes **Fortune Global 500** [(link)](https://fortune.com/ranking/global500/) company data for analysis and research.
+A Python tool for scraping and analyzing **Fortune Global 500** company data across multiple years.
 
-This project allows you to:
+[![Fortune Global 500](https://img.shields.io/badge/Data%20Source-Fortune%20Global%20500-orange)](https://fortune.com/ranking/global500/)
 
-- Collect company data from multiple years (e.g., 2022–2024).  
-- Filter companies that appear consistently across years.  
-- Save the cleaned data to CSV for further analysis.  
-- Explore the website’s HTML structure to understand how data is extracted.  
+## Overview
 
-## Installation
+This project enables comprehensive analysis of the world's largest corporations by collecting structured data from Fortune's Global 500 rankings. Track company performance, industry trends, and geographic distribution across multiple years.
+
+## Features
+
+- **Multi-year scraping** – Collect data from any year available on Fortune's website
+- **Consistency filtering** – Identify companies that appear across all selected years
+- **Rich dataset** – Company Name, country, industry, year, fortune global 500 ranking, revenue, profits, assets, employees
+- **Export to CSV** – Clean, analysis-ready data format
+- **Example analysis** – Sample visualization and insights included
+
+## Quick Start
+
+### Installation
 ```bash
 pip install -r requirements.txt
 ```
 
-## Usage
+### Basic Usage
 ```python
 from fortune_scraper import scrape_fortune_global, filter_consistent_companies
 
@@ -22,26 +31,58 @@ from fortune_scraper import scrape_fortune_global, filter_consistent_companies
 years = [2024, 2023, 2022]
 df = scrape_fortune_global(years)
 
-# Keep only companies in all years
+# Filter for companies present in all years
 df_filtered = filter_consistent_companies(df)
 
 # Save to CSV
 df_filtered.to_csv('fortune500_data.csv', index=False)
 ```
 
-## Data Fields
+### Example Analysis
 
-- Company Name
-- Country
-- Industry
-- Year
-- Fortune global 500 ranking
-- Revenue (USD Millions)
-- Profits (USD Millions)
-- Assets (USD Millions)
-- Employees
+Run the included analysis script to see sample visualizations:
+```bash
+python example_analysis.py
+```
 
-## Data File
+## Data Structure
 
-The scraped and filtered Fortune Global 500 data is available in this repository as [`fortune500_data.csv`](fortune500_data.csv).  
-You can download it directly from GitHub and use it for analysis or plotting without needing to run the scraper.
+The scraped dataset includes the following fields:
+
+| Field | Description |
+|-------|-------------|
+| **Company Name** | Official company name |
+| **Country** | Company headquarters location |
+| **Industry** | Business sector classification |
+| **Year** | Ranking year |
+| **Rank** | Fortune Global 500 ranking position |
+| **Revenue** | Total revenue (USD millions) |
+| **Profits** | Net profits (USD millions) |
+| **Assets** | Total assets (USD millions) |
+| **Employees** | Total employee count |
+
+## Files in This Repository
+```
+fortune-global-500-scraper/
+├── fortune_scraper.py      # Main scraping module
+├── fortune500_data.csv     # Pre-scraped dataset (2022-2024)
+├── example_analysis.py     # Sample analysis and visualization
+├── requirements.txt        # Python dependencies
+├── README.md              # This file
+└── .gitignore            # Git ignore rules
+```
+
+## Pre-scraped Data
+
+Don't want to scrape? **`fortune500_data.csv`** contains ready-to-use data for 2022–2024, filtered for companies appearing in all three years.
+```python
+import pandas as pd
+
+# Load pre-scraped data
+df = pd.read_csv('fortune500_data.csv')
+print(df.head())
+```
+
+## License
+
+This project is provided for educational and research purposes. Please respect Fortune's terms of service and copyright when using scraped data.
