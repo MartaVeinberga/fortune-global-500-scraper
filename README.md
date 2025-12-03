@@ -14,7 +14,7 @@ This project enables comprehensive analysis of the world's largest corporations 
 - **Consistency filtering** – Identify companies that appear across all selected years
 - **Rich dataset** – Company, country, industry, year, rank, revenue, profits, assets, employees
 - **Export to CSV** – Clean, analysis-ready data format
-- **Example analysis** – Sample visualization and insights included
+- **Example analysis** – Sample visualization
 
 ## Quick Start
 
@@ -88,4 +88,5 @@ import pandas as pd
 df = pd.read_csv('fortune500_data.csv')
 print(df.head())
 ```
+
 
