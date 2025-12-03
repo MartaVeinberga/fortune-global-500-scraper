@@ -45,6 +45,3 @@ df_filtered.to_csv('fortune500_data.csv', index=False)
 
 The scraped and filtered Fortune Global 500 data is available in this repository as [`fortune500_data.csv`](fortune500_data.csv).  
 You can download it directly from GitHub and use it for analysis or plotting without needing to run the scraper.
-
-```
-
