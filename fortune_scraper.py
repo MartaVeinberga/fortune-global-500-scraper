@@ -39,14 +39,14 @@ def scrape_fortune_global(years):
         for c in items:
             d = c.get("data", {})
             all_data.append({
-                "Company Name": c.get("name"),
+                "Company": c.get("name"),
                 "Country": d.get("Country / Territory"),
                 "Industry": d.get("Industry"),
                 "Year": year,
-                "Fortune global 500 ranking": c.get("rank"),
-                "Revenue (USD Millions)": money_to_float(d.get("Revenues ($M)")),
-                "Profits (USD Millions)": money_to_float(d.get("Profits ($M)")),
-                "Assets (USD Millions)": money_to_float(d.get("Assets ($M)")),
+                "Rank": c.get("rank"),
+                "Revenue": money_to_float(d.get("Revenues ($M)")),
+                "Profits": money_to_float(d.get("Profits ($M)")),
+                "Assets": money_to_float(d.get("Assets ($M)")),
                 "Employees": int(d.get("Employees", "0").replace(",", ""))
             })
 
@@ -56,11 +56,11 @@ def filter_consistent_companies(df):
     """
     Keep only companies that appear in all years.
     """
-    company_year_counts = df.groupby("Company Name")["Year"].nunique()
+    company_year_counts = df.groupby("Company")["Year"].nunique()
     n_years = df["Year"].nunique()
     common_companies = company_year_counts[company_year_counts == n_years].index
     
-    return df[df["Company Name"].isin(common_companies)]
+    return df[df["Company"].isin(common_companies)]
 
 # Example usage
 years = [2024, 2023, 2022]
@@ -76,3 +76,4 @@ print(f"Filtered records: {fortune_df_all_years.shape}")
 
 
 fortune_df_all_years.to_csv('fortune500_data.csv', index=False)
+
