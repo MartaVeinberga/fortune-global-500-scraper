@@ -24,6 +24,12 @@ pip install -r requirements.txt
 ```
 
 ### Basic Usage
+**Run directly:**
+```bash
+python fortune_scraper.py
+```
+
+**Or use as a Python module:**
 ```python
 from fortune_scraper import scrape_fortune_global, filter_consistent_companies
 
@@ -82,3 +88,4 @@ import pandas as pd
 df = pd.read_csv('fortune500_data.csv')
 print(df.head())
 ```
+
