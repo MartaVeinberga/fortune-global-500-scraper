@@ -40,7 +40,7 @@ df_filtered.to_csv('fortune500_data.csv', index=False)
 
 ### Example Analysis
 
-Run the included analysis script to see sample visualizations:
+Run the included analysis script to see sample visualization:
 ```bash
 python example_analysis.py
 ```
@@ -86,4 +86,5 @@ print(df.head())
 ## License
 
 This project is provided for educational and research purposes. Please respect Fortune's terms of service and copyright when using scraped data.
+
 
