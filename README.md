@@ -6,7 +6,7 @@ A Python tool for scraping and analyzing **Fortune Global 500** company data acr
 
 ## Features
 
-- **Multi-year scraping** – Collect data from any year available on Fortune's website
+- **Multi-year scraping** – Collect data from any year available on Fortune's website (1995 - 2024)
 - **Consistency filtering** – Identify companies that appear across all selected years
 - **Rich dataset** – Company, country, industry, year, rank, revenue, profits, assets, employees
 - **Export to CSV** – Clean, analysis-ready data format
@@ -84,6 +84,7 @@ import pandas as pd
 df = pd.read_csv('fortune500_data.csv')
 print(df.head())
 ```
+
 
 
 
