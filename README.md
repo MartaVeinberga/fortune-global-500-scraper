@@ -4,10 +4,6 @@ A Python tool for scraping and analyzing **Fortune Global 500** company data acr
 
 [![Fortune Global 500](https://img.shields.io/badge/Data%20Source-Fortune%20Global%20500-orange)](https://fortune.com/ranking/global500/)
 
-## Overview
-
-This project enables comprehensive analysis of the world's largest corporations by collecting structured data from Fortune's Global 500 rankings. Track company performance, industry trends, and geographic distribution across multiple years.
-
 ## Features
 
 - **Multi-year scraping** – Collect data from any year available on Fortune's website
@@ -88,5 +84,6 @@ import pandas as pd
 df = pd.read_csv('fortune500_data.csv')
 print(df.head())
 ```
+
 
 
